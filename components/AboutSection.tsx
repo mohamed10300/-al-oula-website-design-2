@@ -25,14 +25,16 @@ export const AboutSection = () => {
               {data.body}
             </p>
             <div className='flex items-center gap-6'>
-              <div className='w-16 h-16 rounded-full bg-[#E40521] flex items-center justify-center text-white text-xl font-bold font-kanit'>
-                {data.founded}
+              <div className='w-16 h-16 rounded-full bg-[#E40521] flex items-center justify-center text-white font-bold font-kanit text-sm text-center leading-tight px-1'>
+                2003
               </div>
               <div>
                 <div className='text-3xl font-bold text-[#414042] font-kanit'>
-                  {data.statValue.toLocaleString()}
+                  1.504
                 </div>
-                <div className='text-[#6D6E71]'>{data.statLabel}</div>
+                <div className='text-[#6D6E71]'>
+                  {language === 'ar' ? 'مليار جنيه رأس المال المدفوع' : 'Billion EGP Paid-up Capital'}
+                </div>
               </div>
             </div>
           </motion.div>
