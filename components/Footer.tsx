@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { content } from '@/lib/content';
-import { LogoWhite } from './Logo';
+import { LogoColoredHorizontal } from './Logo';
 import { Facebook, Instagram, Linkedin, Phone, Mail, Clock, MapPin } from 'lucide-react';
 
 export const Footer = () => {
@@ -16,13 +16,15 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Logo & Tagline */}
           <div className="col-span-1 md:col-span-1">
-            <LogoWhite className="h-12 w-auto mb-6" />
+            <div className="bg-white rounded-lg p-2 inline-block mb-6">
+              <LogoColoredHorizontal className="h-12 w-auto" />
+            </div>
             <p className="text-[#D1D3D4] text-lg">{data.footer.tagline}</p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-|e font-bold mb-6 text-white">{data.footer.col1Title}</h3>
+            <h3 className="text-xl font-bold mb-6 text-white">{data.footer.col1Title}</h3>
             <ul className="space-y-4">
               {data.nav.links.map((link) => (
                 <li key={link.label}>
@@ -55,7 +57,7 @@ export const Footer = () => {
                 <span>{data.footer.hours}</span>
               </div>
             </div>
-            
+
             <div className="mt-8 flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#E40521] transition-colors">
                 <Facebook size={20} />
