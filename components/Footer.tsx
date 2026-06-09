@@ -16,11 +16,11 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Logo & Tagline */}
           <div className="col-span-1 md:col-span-1">
-            <div className="bg-white rounded-lg p-2 inline-block mb-6">
-              <LogoColoredHorizontal className="h-12 w-auto" />
             <div className="mb-6">
-  <LogoColoredHorizontal className="h-20 w-auto" />
-</div>
+              <LogoColoredHorizontal className="h-20 w-auto" />
+            </div>
+            <p className="text-[#D1D3D4] text-lg">{data.footer.tagline}</p>
+          </div>
 
           {/* Quick Links */}
           <div>
