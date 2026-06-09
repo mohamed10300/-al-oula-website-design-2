@@ -54,21 +54,29 @@ export const Navbar = () => {
 
             <button
               onClick={toggleLanguage}
-              className='relative flex items-center justify-between w-16 h-8 rounded-full border border-[#E40521] p-1 overflow-hidden'
+              className='relative flex items-center w-16 h-8 rounded-full bg-[#F5F5F5] border border-[#E40521] p-1 overflow-hidden'
               aria-label='Toggle Language'
             >
-              <span className='z-10 text-xs font-bold text-[#E40521] w-full text-center'>
-                {language === 'ar' ? 'EN' : 'عر'}
-              </span>
               <motion.div
-                layoutId='lang-pill'
-                className='absolute w-6 h-6 rounded-full bg-[#E40521] opacity-10'
+                className='absolute w-6 h-6 rounded-full bg-[#E40521]'
                 initial={false}
                 animate={{
-                  x: language === 'ar' ? (isRtl ? -24 : 24) : 0,
+                  x: language === 'ar' ? (isRtl ? 1 : 33) : (isRtl ? 33 : 1),
                 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
               />
+              <span className={clsx(
+                'z-10 text-xs font-bold w-1/2 text-center transition-colors duration-200',
+                language === 'ar' ? (isRtl ? 'text-white' : 'text-[#E40521]') : (isRtl ? 'text-[#E40521]' : 'text-white')
+              )}>
+                {isRtl ? 'عر' : 'EN'}
+              </span>
+              <span className={clsx(
+                'z-10 text-xs font-bold w-1/2 text-center transition-colors duration-200',
+                language === 'ar' ? (isRtl ? 'text-[#E40521]' : 'text-white') : (isRtl ? 'text-white' : 'text-[#E40521]')
+              )}>
+                {isRtl ? 'EN' : 'عر'}
+              </span>
             </button>
 
             <button className='md:hidden text-[#414042]' onClick={() => setIsOpen(!isOpen)}>
