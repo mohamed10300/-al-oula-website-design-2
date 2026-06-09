@@ -18,9 +18,9 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-1">
             <div className="bg-white rounded-lg p-2 inline-block mb-6">
               <LogoColoredHorizontal className="h-12 w-auto" />
-            </div>
-            <p className="text-[#D1D3D4] text-lg">{data.footer.tagline}</p>
-          </div>
+            <div className="mb-6">
+  <LogoColoredHorizontal className="h-20 w-auto" />
+</div>
 
           {/* Quick Links */}
           <div>
