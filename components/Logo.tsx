@@ -18,8 +18,8 @@ export const LogoColoredHorizontal = ({ className }: LogoProps) => {
     <Image
       src={src}
       alt='Al-Oula Logo'
-      width={180}
-      height={60}
+      width={216}
+      height={72}
       className={className}
       style={{ objectFit: 'contain' }}
       priority
