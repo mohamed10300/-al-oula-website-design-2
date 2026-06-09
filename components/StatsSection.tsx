@@ -9,7 +9,7 @@ const StatItem = ({ item }: { item: { value: number; label: string; plus: boolea
   const { count, setInView } = useCounter(item.value);
   return (
     <motion.div
-      onViewportEnter=(() => setInView(true)}
+      onViewportEnter={() => setInView(true)}
       viewport={{ once: true }}
       className="text-center p-6"
     >
