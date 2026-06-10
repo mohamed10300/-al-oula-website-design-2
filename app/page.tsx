@@ -2,6 +2,7 @@ import { Navbar } from '@/components/Navbar';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { ProductsSection } from '@/components/ProductsSection';
+import { MortgageCalculator } from '@/components/MortgageCalculator';
 import { CBESection } from '@/components/CBESection';
 import { StatsSection } from '@/components/StatsSection';
 import { CSRSection } from '@/components/CSRSection';
@@ -15,6 +16,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProductsSection />
+      <MortgageCalculator />
       <CBESection />
       <StatsSection />
       <CSRSection />
