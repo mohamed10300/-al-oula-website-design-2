@@ -43,7 +43,7 @@ export const MortgageCalculator = () => {
   const [propertyValue, setPropertyValue] = useState('');
   const [downPayment, setDownPayment] = useState('20');
   const [loanTerm, setLoanTerm] = useState('10');
-  constconst [interestRate, setInterestRate] = useState('24.5');
+  const [interestRate, setInterestRate] = useState('24.5');
   const [result, setResult] = useState<{
     monthly: number;
     loanAmount: number;
